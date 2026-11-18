@@ -1,9 +1,9 @@
 # as400-mcp-server
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-![node](https://img.shields.io/badge/node-%E2%89%A522-339933)
-![MCP](https://img.shields.io/badge/MCP-compatible-purple)
-![IBM i](https://img.shields.io/badge/IBM%20i-7.4-blue)
+[![node](https://img.shields.io/badge/node-%E2%89%A522-339933)](https://nodejs.org)
+[![MCP](https://img.shields.io/badge/MCP-compatible-purple)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
+[![IBM i](https://img.shields.io/badge/IBM%20i-7.4-blue)](https://www.ibm.com/products/ibm-i)
 
 **Language:** English · [Italiano](README.it.md)
 
