@@ -1,4 +1,4 @@
-# my-mcp-as400
+# as400-mcp-server
 
 **Language:** English · [Italiano](README.it.md)
 
