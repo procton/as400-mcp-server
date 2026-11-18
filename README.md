@@ -1,5 +1,10 @@
 # as400-mcp-server
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+![node](https://img.shields.io/badge/node-%E2%89%A522-339933)
+![MCP](https://img.shields.io/badge/MCP-compatible-purple)
+![IBM i](https://img.shields.io/badge/IBM%20i-7.4-blue)
+
 **Language:** English · [Italiano](README.it.md)
 
 **Read-only** MCP server (stdio) that connects an AI assistant to an IBM i (AS/400) system:
@@ -207,7 +212,7 @@ in that case use the absolute path of the binary (`command -v node`) instead of 
 ### Claude Code
 
 ```bash
-claude mcp add as400 -- node <path-to-inst-folder>/my-mcp-as400/dist/index.js
+claude mcp add as400 -- node <path-to-inst-folder>/as400-mcp-server/dist/index.js
 claude mcp list
 ```
 
@@ -218,7 +223,7 @@ or in the project's `.mcp.json`:
   "mcpServers": {
     "as400": {
       "command": "node",
-      "args": ["<path-to-inst-folder>/my-mcp-as400/dist/index.js"]
+      "args": ["<path-to-inst-folder>/as400-mcp-server/dist/index.js"]
     }
   }
 }
@@ -229,7 +234,7 @@ or in the project's `.mcp.json`:
 Codex CLI reads MCP servers from `~/.codex/config.toml`. To enable it:
 
 ```bash
-codex mcp add as400 -- node <path-to-inst-folder>/my-mcp-as400/dist/index.js
+codex mcp add as400 -- node <path-to-inst-folder>/as400-mcp-server/dist/index.js
 codex mcp list
 ```
 
@@ -238,7 +243,7 @@ or, by hand, in `~/.codex/config.toml`:
 ```toml
 [mcp_servers.as400]
 command = "node"
-args = ["<path-to-inst-folder>/my-mcp-as400/dist/index.js"]
+args = ["<path-to-inst-folder>/as400-mcp-server/dist/index.js"]
 startup_timeout_sec = 30
 tool_timeout_sec = 300
 ```
@@ -253,10 +258,10 @@ The easiest way is OpenCode's own command, which writes the configuration for yo
 
 ```bash
 # current project only (writes opencode.json in the folder)
-opencode mcp add as400 -- node <path-to-inst-folder>/my-mcp-as400/dist/index.js
+opencode mcp add as400 -- node <path-to-inst-folder>/as400-mcp-server/dist/index.js
 
 # all projects (global configuration)
-opencode mcp add --global as400 -- node <path-to-inst-folder>/my-mcp-as400/dist/index.js
+opencode mcp add --global as400 -- node <path-to-inst-folder>/as400-mcp-server/dist/index.js
 
 opencode mcp list
 ```
@@ -269,7 +274,7 @@ With OpenCode 2.2.0 the command produces this entry:
     "servers": {
       "as400": {
         "type": "local",
-        "command": ["node", "<path-to-inst-folder>/my-mcp-as400/dist/index.js"]
+        "command": ["node", "<path-to-inst-folder>/as400-mcp-server/dist/index.js"]
       }
     }
   }
