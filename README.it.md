@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![node](https://img.shields.io/badge/node-%E2%89%A522-339933)](https://nodejs.org)
+[![Java](https://img.shields.io/badge/Java-JDK%2021%2B-ED8B00)](https://openjdk.org)
 [![MCP](https://img.shields.io/badge/MCP-compatible-purple)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
 [![IBM i](https://img.shields.io/badge/IBM%20i-7.4-blue)](https://www.ibm.com/products/ibm-i)
 
@@ -15,7 +16,7 @@ Si collega a qualunque client MCP su stdio; sono documentati [Claude Code](#clau
 > **Lingua.** Dalla versione con `LOCALE` il server parla **inglese** per impostazione predefinita. Questo README descrive i
 > nomi italiani: per ottenerli imposta `LOCALE=IT` nel `.env`. Vedi [Lingua](#lingua-locale).
 
-Basato su `node-jt400` (JDBC JT400 via bridge Java): richiede **Node >= 22** e **un JDK/JRE Java**.
+Basato su `node-jt400` (JDBC JT400 via bridge Java): richiede **Node >= 22** e **un JDK Java 21 o successivo**.
 Testato su **IBM i 7.4**. Per verificare la compatibilità con altra versioni, utilizzare il comando **npm run test:e2e**
 
 ## Tool disponibili

@@ -56,7 +56,7 @@ produce una riga `my-mcp-as400 audit {...}` con nome del tool, argomenti, durata
 
 - un compilatore e `make` (su Debian/Ubuntu: `sudo apt install build-essential`);
 - Python 3 (richiesto da `node-gyp`);
-- un **JDK** (non basta il JRE) con `JAVA_HOME` valido.
+- un **JDK 21 o successivo** (non basta il JRE) con `JAVA_HOME` valido.
 
 ```bash
 java -version            # deve rispondere
@@ -64,7 +64,7 @@ echo "$JAVA_HOME"        # deve puntare al JDK
 ```
 
 Se l'installazione è già avvenuta con il JDK sbagliato, dopo averlo corretto: `rm -rf node_modules && npm install`.
-Il progetto è stato provato con Node 22 e OpenJDK 21. Il `package.json` richiede Node ≥ 22.
+Il progetto è stato provato con Node 22 e OpenJDK 21. Il `package.json` richiede Node ≥ 22; il JDK minimo è il 21.
 
 ### `Variabile ambiente mancante: AS400_HOST (vedi .env.example)`
 

@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![node](https://img.shields.io/badge/node-%E2%89%A522-339933)](https://nodejs.org)
+[![Java](https://img.shields.io/badge/Java-JDK%2021%2B-ED8B00)](https://openjdk.org)
 [![MCP](https://img.shields.io/badge/MCP-compatible-purple)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
 [![IBM i](https://img.shields.io/badge/IBM%20i-7.4-blue)](https://www.ibm.com/products/ibm-i)
 
@@ -12,7 +13,7 @@ sources (RPG/CL/DDS), IFS, physical/logical files via SQL, and output queues (sp
 It works with any MCP client that can launch a local stdio server; [Claude Code](#claude-code),
 [Codex](#codex) and [OpenCode](#opencode) are documented below.
 
-Built on `node-jt400` (JDBC JT400 through a Java bridge): requires **Node >= 22** and **a Java JDK**.
+Built on `node-jt400` (JDBC JT400 through a Java bridge): requires **Node >= 22** and **a Java JDK 21 or later**.
 Tested on **IBM i 7.4**. To check compatibility with other releases, run **npm run test:e2e**
 (see section 9 of the [troubleshooting guide](docs/TROUBLESHOOTING.md#9-ibm-i-releases-earlier-than-74)).
 
