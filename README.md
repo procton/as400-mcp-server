@@ -78,6 +78,27 @@ Resources use the same logic as the tools, so `ALLOWED_LIBS`, `IFS_ALLOWED_PREFI
 | `query_data` | answer a question about the data: find the right files and fields, write a read-only SELECT, run it and report the answer, the query and the assumptions |
 | `explain_print_file` | describe the layout of a PRTF/DSPF and compare it with real spooled files |
 
+## Skills
+
+The [`SKILLS/`](SKILLS/README.md) folder contains ready-made Claude skills that teach a model how to use these tools well:
+which tool to choose, in what order, with which filters, what the limits are and how to report what was verified and what
+was only inferred. Each folder is independent and can be loaded in any Claude environment (for Claude Code, copy it into
+`~/.claude/skills/` or `.claude/skills/`).
+
+| Skill | Covers |
+|---|---|
+| `as400-mcp-basics` | start here: connection, `LOCALE` parameter names, limits, choosing a tool |
+| `as400-source-discovery` | list, read and search sources |
+| `as400-source-analysis` | one program: references, call graph, DDS layouts, fixed-format RPG |
+| `as400-database-catalog` | files, fields, keys, logicals, constraints, views, routines |
+| `as400-sql-data-query` | read-only queries on real data |
+| `as400-object-inspection` | programs, service programs, commands, data areas |
+| `as400-ifs-files` | browse, read and search the IFS |
+| `as400-spool-files` | find and read spooled files and joblogs |
+| `as400-feature-reverse-engineering` | workflow to map a business feature across an ERP and write the report |
+
+The skills do not replace the server: the MCP server must be connected for the tools to work.
+
 ## Language (`LOCALE`)
 
 The server speaks English by default. Set `LOCALE` in the `.env` to choose:

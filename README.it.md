@@ -77,6 +77,27 @@ Le risorse usano la stessa logica dei tool: valgono `ALLOWED_LIBS`, `IFS_ALLOWED
 | `interroga_dati` | rispondere a una domanda sui dati: trovare file e campi giusti, scrivere una SELECT di sola lettura, eseguirla e riportare risposta, query e assunzioni |
 | `spiega_stampa` | descrivere il layout di un PRTF/DSPF e confrontarlo con gli spool reali |
 
+## Skill
+
+La cartella [`SKILLS/`](SKILLS/README.md) contiene skill Claude pronte all'uso, che insegnano a un modello a usare bene questi
+tool: quale scegliere, in che ordine, con quali filtri, quali sono i limiti e come riferire ciò che è stato verificato e ciò
+che è solo dedotto. Ogni cartella è indipendente e può essere caricata in qualsiasi ambiente Claude (per Claude Code, copiala
+in `~/.claude/skills/` oppure in `.claude/skills/`). Il testo delle skill è in inglese.
+
+| Skill | Copre |
+|---|---|
+| `as400-mcp-basics` | da cui iniziare: connessione, nomi dei parametri con `LOCALE`, limiti, scelta del tool |
+| `as400-source-discovery` | elencare, leggere e cercare sorgenti |
+| `as400-source-analysis` | un programma: riferimenti, grafo delle chiamate, layout DDS, RPG a formato fisso |
+| `as400-database-catalog` | file, campi, chiavi, logici, vincoli, viste, routine |
+| `as400-sql-data-query` | interrogazioni in sola lettura sui dati reali |
+| `as400-object-inspection` | programmi, service program, comandi, data area |
+| `as400-ifs-files` | esplorare, leggere e cercare nell'IFS |
+| `as400-spool-files` | trovare e leggere spool e joblog |
+| `as400-feature-reverse-engineering` | flusso per mappare una funzionalità di business in un ERP e scrivere il report |
+
+Le skill non sostituiscono il server: perché i tool funzionino il server MCP deve essere collegato.
+
 ## Lingua (`LOCALE`)
 
 Il server parla inglese per impostazione predefinita. Imposta `LOCALE` nel `.env` per scegliere:
